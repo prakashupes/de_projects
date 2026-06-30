@@ -8,7 +8,7 @@ Development Environment Configuration
 
 ENV = "dev"
 
-AWS_REGION = "ap-south-1"
+AWS_REGION = "us-east-1"
 
 AWS_ACCOUNT_ID = "<YOUR_AWS_ACCOUNT_ID>"
 
@@ -18,7 +18,7 @@ AWS_ACCOUNT_ID = "<YOUR_AWS_ACCOUNT_ID>"
 # ==========================================================
 
 DATA_LAKE_BUCKET = "retail-data-lake-dev"
-
+DATA_LAKE_BUCKET_ARN = "arn:aws:s3:::retail-data-lake-dev"
 # Bucket Names
 SCRIPT_BUCKET = DATA_LAKE_BUCKET
 DDL_BUCKET = DATA_LAKE_BUCKET
@@ -39,6 +39,8 @@ TEMP_PREFIX = "temp/"
 # Glue Configuration
 # ==========================================================
 
+GLUE_CATALOG_NAME = "320489876642"
+GLUE_DATABASE_NAME = "retail_dev"
 GLUE_ROLE = "AWSGlueServiceRole-Retail"
 
 GLUE_VERSION = "5.0"
