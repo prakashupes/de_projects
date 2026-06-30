@@ -6,7 +6,7 @@ from pathlib import Path
 
 START_DATE = "2026-06-01"
 NUMBER_OF_DAYS = 5
-ROWS_PER_DAY = 10000
+ROWS_PER_DAY = 1000
 
 # Output Folder
 BASE_DIR = Path(__file__).parent

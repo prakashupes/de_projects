@@ -1,0 +1,10 @@
+config_loader.py
+create_bucket.py
+create_folders.py
+upload_scripts.py
+upload_ddls.py
+upload_source_data.py
+create_database.py
+deploy_tables.py
+create_glue_jobs.py
+setup_project.py
