@@ -1,0 +1,48 @@
+{
+    "enabled": true,
+
+    "table_name": "sales",
+
+    "catalog": {
+        "raw_database": "retail_raw",
+        "bronze_database": "retail_bronze",
+        "silver_database": "retail_silver",
+        "gold_database": "retail_gold"
+    },
+
+    "source": {
+        "bucket": "retail-source",
+        "prefix": "sales/"
+    },
+
+    "storage": {
+        "raw": {
+            "bucket": "retail-data-lake",
+            "prefix": "raw/sales/"
+        },
+        "bronze": {
+            "bucket": "retail-data-lake",
+            "prefix": "bronze/sales/"
+        }
+    },
+
+    "file_format": "csv",
+
+    "partition_columns": [
+        "year",
+        "month",
+        "day"
+    ],
+
+    "load_type": "full",
+
+    "ddl": {
+        "raw": "athena_ddls/raw_sales.sql",
+        "bronze": "athena_ddls/bronze_sales.sql"
+    },
+
+    "dml": {
+        "raw_to_bronze": "glue/raw_to_bronze_sales.py",
+        "bronze_to_silver": "glue/bronze_to_silver_sales.py"
+    }
+}
