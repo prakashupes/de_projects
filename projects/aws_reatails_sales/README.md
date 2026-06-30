@@ -110,12 +110,6 @@ aws_retail_sales/
 │   ├── generate_sales.py
 │   └── sample_data/
 │
-├── etl_utils/
-│   ├── config.py
-│   ├── constants.py
-│   ├── logger.py
-│   ├── validations.py
-│   └── helpers.py
 │
 ├── glue/
 │   ├── raw_to_bronze.py
