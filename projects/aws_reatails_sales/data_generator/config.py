@@ -5,7 +5,7 @@ from pathlib import Path
 # ===========================
 
 START_DATE = "2026-06-01"
-NUMBER_OF_DAYS = 30
+NUMBER_OF_DAYS = 5
 ROWS_PER_DAY = 10000
 
 # Output Folder

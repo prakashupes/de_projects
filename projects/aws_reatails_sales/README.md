@@ -95,48 +95,46 @@ The incoming data is delivered as CSV files and must be transformed into an anal
 # Project Structure
 
 ```text
-Retail-Sales-Data-Lake/
+# Project Structure
+
+```text
+aws_retail_sales/
 │
-├── data/
-│   ├── sales_2026_06_01.csv
-│   ├── sales_2026_06_02.csv
-│   └── ...
-│
-├── ddl/
+├── athena_ddls/
+│   ├── create_database.sql
 │   ├── raw_sales.sql
 │   ├── bronze_sales.sql
 │   └── processed_sales.sql
 │
+├── data_generator/
+│   ├── generate_sales.py
+│   └── sample_data/
+│
+├── etl_utils/
+│   ├── config.py
+│   ├── constants.py
+│   ├── logger.py
+│   ├── validations.py
+│   └── helpers.py
+│
 ├── glue/
 │   ├── raw_to_bronze.py
 │   ├── bronze_to_processed.py
-│   └── common/
-│       ├── utils.py
-│       ├── config.py
-│       └── validations.py
+│   └── common.py
 │
 ├── infra/
-│   ├── deploy.py
-│   └── create_resources.py
+│   ├── create_bucket.py
+│   ├── create_database.py
+│   ├── create_glue_job.py
+│   ├── upload_scripts.py
+│   ├── deploy_tables.py
+│   └── setup_project.py
 │
-├── boto3/
-│   ├── start_glue_job.py
-│   └── monitor_job.py
+├── prompts/
+│   ├── project_notes.md
+│   └── learning_notes.md
 │
-├── sql/
-│   ├── business_queries.sql
-│   └── validation_queries.sql
-│
-├── config/
-│   ├── dev.yaml
-│   ├── qa.yaml
-│   └── prod.yaml
-│
-├── screenshots/
-│
-├── tests/
-│
-├── README.md
+└── README.md
 │
 └── architecture.png
 ```
